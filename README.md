@@ -1,121 +1,133 @@
-# Tic-Tac-Toe Web App 🎮
+# 🎮 Tic-Tac-Toe Web App (Flask)
 
-A simple and modern **Tic Tac Toe game** built using **Flask (Python)** for the backend and **HTML/CSS/JavaScript** for the frontend. The UI features a futuristic **dark mode neon theme**.
-
----
-
-## 🔗 GitHub Repository
-
-**[https://github.com/RasikhAli/Tic-Tac-Toe-Web-App.git](https://github.com/RasikhAli/Tic-Tac-Toe-Web-App.git)**
+A simple, interactive, and visually appealing **Tic-Tac-Toe game** built using **Python (Flask)** for the backend and **HTML, CSS, JavaScript** for the frontend.
+Features include **real-time updates**, **win/draw detection**, and a glowing **dark-mode UI**.
 
 ---
 
-## ✨ Features
+## 📌 Live Demo (Optional)
 
-✔️ Play Tic Tac Toe in the browser
-✔️ Neon dark-mode UI
-✔️ Real-time game updates without page reloads
-✔️ Win detection, draw detection, and turn switching
-✔️ “Reset Game” button
-✔️ Lightweight Flask backend API
-✔️ Simple folder structure and easy to extend
+If you deploy it on Render/Heroku/etc., add the link here.
 
 ---
 
-## 📁 Project Structure
+## 🧩 Features
+
+* ✔️ Classic Tic-Tac-Toe gameplay
+* ✔️ Flask-powered backend with JSON APIs
+* ✔️ Real-time move updates without page reload
+* ✔️ Win, lose, and draw detection
+* ✔️ Reset game with one click
+* ✔️ Stylish **dark-mode neon UI**
+* ✔️ Fully responsive grid layout
+
+---
+
+## 📂 Project Structure
 
 ```
 Tic-Tac-Toe-Web-App/
 │
-├── app.py               # Flask backend and game logic
+├── app.py                 # Flask backend
 ├── templates/
-│   └── index.html       # Frontend layout
+│   └── index.html         # Frontend UI
 ├── static/
-│   └── style.css        # Styling (dark mode neon theme)
+│   └── style.css          # Styling
 └── README.md
 ```
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Installation & Setup
 
-### 1. Clone the Repository
+### 1. Clone the repository
 
-```sh
+```bash
 git clone https://github.com/RasikhAli/Tic-Tac-Toe-Web-App.git
 cd Tic-Tac-Toe-Web-App
 ```
 
-### 2. Create a Virtual Environment (Optional but recommended)
+### 2. Create & activate a virtual environment (optional but recommended)
 
-```sh
+```bash
 python -m venv venv
-source venv/bin/activate      # Linux/Mac
-venv\Scripts\activate         # Windows
+source venv/bin/activate  # Mac/Linux
+venv\Scripts\activate     # Windows
 ```
 
-### 3. Install Dependencies
+### 3. Install dependencies
 
-```sh
+```bash
 pip install flask
 ```
 
-### 4. Run the App
+### 4. Run the application
 
-```sh
+```bash
 python app.py
 ```
 
-### 5. Open in Browser
+### 5. Open the game
 
-Visit:
+Visit in your browser:
 
 ```
-http://127.0.0.1:5000
+http://127.0.0.1:5000/
 ```
 
 ---
 
-## 🧠 How It Works
+## 🕹️ How It Works
 
 ### Backend (Flask)
 
-* Stores game board, current player, and game status
-* Exposes endpoints:
-
-  * **POST /play** → Handles user moves & checks win/draw conditions
-  * **POST /reset** → Resets the game state
-* Runs basic game logic such as:
-
-  * Win checking
-  * Draw detection
-  * Turn switching
+* Manages the game board, current player, win/draw logic
+* `/play` route handles moves and returns JSON updates
+* `/reset` resets the board
 
 ### Frontend
 
-* HTML grid representing the board
-* JavaScript fetches `/play` API to update the state dynamically
-* CSS provides dark neon styling and hover animations
+* **index.html** renders the board and status text
+* JavaScript handles:
+
+  * Sending player moves
+  * Updating board cells live
+  * Showing win/draw messages
+  * Resetting the game
+
+### Styling
+
+* **Dark neon cyber-style UI**
+* Glowing hover effects
+* Responsive centered layout
 
 ---
 
-## 📸 UI Preview (Optional — you can add a screenshot here)
+## 📸 Preview (Optional)
 
-If you want, I can generate a mock-up image or help you place real screenshots.
+Add screenshots or GIFs of gameplay here once available.
 
 ---
 
-## 🛠 Future Improvements (Ideas)
+## 🛠️ API Routes
 
-* Add AI opponent (Minimax algorithm)
+| Route    | Method | Description                            |
+| -------- | ------ | -------------------------------------- |
+| `/`      | GET    | Loads the game UI                      |
+| `/play`  | POST   | Submit a move (JSON: `{ index: int }`) |
+| `/reset` | POST   | Resets the game                        |
+
+---
+
+## 🔮 Future Improvements
+
+* Add AI opponent (Minimax / Easy / Hard modes)
+* Add multiplayer online support
 * Add score tracking
-* Add animations for wins
-* Allow multiplayer over network or WebSockets
-* Mobile-responsive design
+* Animate winning line
 
 ---
 
 ## 📄 License
 
-This project is open-source and available for modification.
-(If you want a formal license like MIT, I can add it!)
+This project is open-source. Feel free to modify and improve it!
